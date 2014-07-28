@@ -1,3 +1,7 @@
+Can not load rake tasks in my rails 4.1 local env, so have a trival fix. But it does NOT occur in others, so I don't send pull request to author.
+
+在我本地开发环境中无法载入 rake 任务，做了一点小的修改。但是在别人的环境中无法重现，所以没有发送 pull request 给作者。
+
 == AutoMigrations
 
 Forget migrations, auto-migrate!
