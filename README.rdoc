@@ -4,7 +4,7 @@ Forget migrations, auto-migrate!
 
 == @dux added
 
-Suport for Postgre Array types, :integer and string
+Suport for Postgre Array types, :integer and :string
 
 t.integer  "test_1", default: [], array: true
 t.string   "test_2", default: '{}', array: true
