@@ -96,6 +96,9 @@ module AutoMigrations
         options = {:limit => column.limit, :precision => column.precision, :scale => column.scale}
         options[:default] = column.default if !column.default.nil?
         options[:null]    = column.null    if !column.null.nil?
+        
+        options[:array] = true if (column.type.to_sym == :integer && options[:default] == []) # dux
+
         add_column table_name, column.name, column.type.to_sym, options
       end
 
