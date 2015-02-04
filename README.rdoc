@@ -7,7 +7,7 @@ Forget migrations, auto-migrate!
 Suport for Postgre Array types, :integer and :string
 
   t.integer  "test_1", default: [], array: true
-  t.string   "test_2", default: '{}', array: true
+  t.string   "test_2", default: [], array: true
 
 You MUST add default option for auto migrations to work
 
