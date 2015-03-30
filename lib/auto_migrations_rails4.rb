@@ -130,7 +130,8 @@ module AutoMigrations
           # This catches stuff like :null, :precision, etc
           fields_in_schema[field].each_pair do |att,value|
             next if att == :type or att == :base or att == :name # special cases
-            if !value.nil? && value != fields_in_db[field].send(att)
+            # if !value.nil? && value != fields_in_db[field].send(att)
+            if !value.nil? && ! value.kind_of?(Array) && value.to_s != fields_in_db[field].send(att).to_s # dux
               new_attr[att] = value
               changed = true
             end
